@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    internal static object instance;
     public TMP_Text countText;
 
     int count = 0;
