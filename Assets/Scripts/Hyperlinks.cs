@@ -6,4 +6,8 @@ public class Hyperlinks : MonoBehaviour
     {
         Application.OpenURL("https://linktr.ee/co2impact");
     }
+    public void OpenDono()
+    {
+        Application.OpenURL("https://treecanada.ca/donate-ngp-individual/");
+    }
 }

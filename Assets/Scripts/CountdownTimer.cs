@@ -8,8 +8,8 @@ public class CountdownTimer : MonoBehaviour
 {
 
     public float countdownTime = 30f;  
-    public string sceneToLoad = "endScreen";  
-    public Text countdownText;          
+    public string sceneToLoad = "endScreen";
+    public TextMeshProUGUI countdownText;
 
     private float currentTime;
 
