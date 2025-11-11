@@ -1,15 +1,15 @@
-
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-
-    public float countdownTime = 30f;  
+    public float countdownTime = 30f;
     public string sceneToLoad = "endScreen";
     public TextMeshProUGUI countdownText;
+
+  
+    public GameManager gameManager;  
 
     private float currentTime;
 
@@ -26,6 +26,20 @@ public class CountdownTimer : MonoBehaviour
         if (currentTime <= 0f)
         {
             currentTime = 0f;
+
+
+            if (gameManager != null)
+            {
+                int finalScore = gameManager.GetCurrentScore();
+                PlayerPrefs.SetInt("FinalScore", finalScore);
+                PlayerPrefs.Save();
+                Debug.Log("Timer saved FinalScore: " + finalScore);
+            }
+            else
+            {
+                Debug.LogWarning("GameManager reference not set on CountdownTimer!");
+            }
+
             SceneManager.LoadScene(sceneToLoad);
         }
 
@@ -40,5 +54,4 @@ public class CountdownTimer : MonoBehaviour
         }
     }
 }
-
 
