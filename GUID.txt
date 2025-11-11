@@ -1,0 +1,5 @@
+<<<<<<< HEAD:WebGL Builds/TemplateData/GUID.txt
+ebda2a0ced3e44698a38cc9fc8c6ef43
+=======
+5ea44937ec6d437e967e448cbc627e44
+>>>>>>> 87b5d1252e1513c357e783cf9e98642690bfbb37:GUID.txt
